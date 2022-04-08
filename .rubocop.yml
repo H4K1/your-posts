@@ -1,3 +1,7 @@
+require:
+  - rubocop-rspec
+AllCops:
+  NewCops: enable
 Style/StringLiterals:
   EnforcedStyle: single_quotes
 Metrics/ClassLength:
