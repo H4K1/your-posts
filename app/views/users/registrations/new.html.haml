@@ -1,0 +1,41 @@
+%div{ style: 'width: 30rem' }
+  %div.card
+    .card-content.px-6
+      %h2.title.has-text-centered Sign up
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = render 'users/shared/error_messages', resource: resource
+        .field
+          = f.label :email, class: 'label'
+          .control.has-icons-left
+            = f.email_field :email, autofocus: true, autocomplete: 'email', class: 'input', placeholder: 'example@email.com'
+            %span{ class: 'icon is-small is-left has-text-grey-light' }
+              %i{ class: 'fas fa-envelope' }
+        .field
+          = f.label :name, class: 'label'
+          .control.has-icons-left
+            = f.email_field :name, autocomplete: 'name', class: 'input', placeholder: 'John Doe'
+            %span{ class: 'icon is-small is-left has-text-grey-light' }
+              %i{ class: 'fas fa-user' }
+        .field
+          = f.label :nickname, class: 'label'
+          .control.has-icons-left
+            = f.email_field :name, autocomplete: 'nickname', class: 'input', placeholder: '@john_doe_2001'
+            %span{ class: 'icon is-small is-left has-text-grey-light' }
+              %i{ class: 'fas fa-at' }
+        .field
+          = f.label :password, class: 'label'
+          .control.has-icons-left
+            = f.password_field :password, autocomplete: 'new-password', class: 'input', placeholder: '*********'
+            %span{ class: 'icon is-small is-left has-text-grey-light' }
+              %i{ class: 'fas fa-lock' }
+        .field
+          = f.label :password_confirmation, class:'label'
+          .control.has-icons-left
+            = f.password_field :password_confirmation, autocomplete: 'new-password', class: 'input', placeholder: '*********'
+            %span{ class: 'icon is-small is-left has-text-grey-light' }
+              %i{ class: 'fas fa-lock' }
+        .field.mt-5
+          .control
+            = f.submit "Sign up", class: 'button is-link is-fullwidth'
+  #div.card.mt-3.p-4.has-text-centered
+    = render "users/shared/links"
