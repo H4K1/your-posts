@@ -13,13 +13,13 @@
         .field
           = f.label :name, class: 'label'
           .control.has-icons-left
-            = f.email_field :name, autocomplete: 'name', class: 'input', placeholder: 'John Doe'
+            = f.text_field :name, autocomplete: 'name', class: 'input', placeholder: 'John Doe'
             %span{ class: 'icon is-small is-left has-text-grey-light' }
               %i{ class: 'fas fa-user' }
         .field
           = f.label :nickname, class: 'label'
           .control.has-icons-left
-            = f.email_field :name, autocomplete: 'nickname', class: 'input', placeholder: '@john_doe_2001'
+            = f.text_field :nickname, autocomplete: 'nickname', class: 'input', placeholder: '@john_doe_2001'
             %span{ class: 'icon is-small is-left has-text-grey-light' }
               %i{ class: 'fas fa-at' }
         .field
