@@ -1,5 +1,9 @@
-inherit_from: .rubocop_todo.yml
-
+require:
+  - rubocop-rspec
+AllCops:
+  NewCops: enable
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
 Metrics/ClassLength:
   Description: 'Avoid classes longer than 100 lines of code.'
   Max: 100
